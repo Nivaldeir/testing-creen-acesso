@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "src/core/app/index.d.ts"
+    ],
+    "resolveJsonModule": true,
+    "target": "ES2021",
+    "experimentalDecorators": true,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true
+  },
+  "baseUrl": ".",
+  "paths": {
+    "@/*": [
+      "src/*"
+    ]
+  },
+  "include": [
+    "src",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "./build",
+    "./node_modules"
+  ]
+}

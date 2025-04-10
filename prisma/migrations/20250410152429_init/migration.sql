@@ -1,0 +1,19 @@
+-- CreateTable
+CREATE TABLE "Lote" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "name" TEXT NOT NULL,
+    "active" BOOLEAN NOT NULL,
+    "create_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- CreateTable
+CREATE TABLE "Boletos" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "name_drawn" TEXT NOT NULL,
+    "loteId" INTEGER NOT NULL,
+    "price" REAL NOT NULL,
+    "cod" TEXT NOT NULL,
+    "active" BOOLEAN NOT NULL,
+    "create_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "Boletos_loteId_fkey" FOREIGN KEY ("loteId") REFERENCES "Lote" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
