@@ -18,6 +18,7 @@ const getBoletos = new FindBoleto(repositoryBoleto)
 const controllerBolletoCreate = new BoletoCreateController('/boletos', 'POST', createBoleto)
 const controllerInvoices = new InvoicesController('/invoices', 'POST', invoices)
 const controllerGetBoleto = new BoletoGetController('/boletos', 'GET', getBoletos)
+
 app.route(controllerBolletoCreate)
 app.route(controllerInvoices)
 app.route(controllerGetBoleto)
