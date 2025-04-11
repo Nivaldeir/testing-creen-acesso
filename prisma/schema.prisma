@@ -15,20 +15,20 @@ datasource db {
 
 model Lote {
   id        Int       @id @default(autoincrement())
-  name      String
-  active    Boolean
-  create_at DateTime  @default(now())
+  nome      String
+  ativo     Boolean
+  criado_em DateTime  @default(now())
   boletos   Boletos[]
 }
 
 model Boletos {
-  id         Int      @id @default(autoincrement())
-  name_drawn String
-  loteId     Int
-  price      Float
-  cod        String
-  active     Boolean
-  create_at  DateTime @default(now())
+  id              Int      @id @default(autoincrement())
+  nome_sacado     String
+  id_lote         Int
+  valor           Float
+  linha_digitavel String
+  ativo           Boolean
+  criado_em       DateTime @default(now())
 
-  lote Lote @relation(fields: [loteId], references: [id])
+  lote Lote @relation(fields: [id_lote], references: [id])
 }
