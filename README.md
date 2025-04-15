@@ -14,7 +14,7 @@
 ## Funcionalidades
 
 - Realiza o cadastro de boletos
-- Realiza busta dos boletos
+- Realiza busca dos boletos
 - Realize a separacao de invoices
 
 
